@@ -41,5 +41,12 @@ int main ()
     a4.addTarea (tj);
     a4.addTarea (tm);
 
+    a1.resultado ();
+    a2.resultado ();
+    a3.resultado ();
+    a4.resultado ();
+
+    cout << "Todas las tareas han sido completadas en menos de 100 min." << endl;
+
     return 0;
 }

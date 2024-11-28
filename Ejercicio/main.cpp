@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "tarea.h"
+#include "actor.h"
 using namespace std;
 
 int main ()
@@ -19,7 +20,26 @@ int main ()
     tarea tl ("L", "Organizar documentos", 5);
     tarea tm ("M", "Viajar al aeropuerto y facturar", 25);
 
-    ta.mostrarTarea ();
+    actor a1 ("Asistente 1");
+    a1.addTarea (ta);
+    a1.addTarea (td);
+    a1.addTarea (te);
+    a1.addTarea (tf);
+
+    actor a2 ("Asistente 2");
+    a2.addTarea (tb);
+    a2.addTarea (tc);
+
+    actor a3 ("Asistente 3");
+    a3.addTarea (tg);
+    a3.addTarea (th);
+
+    actor a4 ("Project Manager");
+    a4.addTarea (ti);
+    a4.addTarea (tk);
+    a4.addTarea (tl);
+    a4.addTarea (tj);
+    a4.addTarea (tm);
 
     return 0;
 }

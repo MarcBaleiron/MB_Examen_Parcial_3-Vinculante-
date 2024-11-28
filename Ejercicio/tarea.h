@@ -17,8 +17,7 @@ public:
     string getId ();
     string getDescripcion ();
     int getDuracion ();
-
-    void mostrarTarea ();
+    string toString ();
 };
 
 #endif

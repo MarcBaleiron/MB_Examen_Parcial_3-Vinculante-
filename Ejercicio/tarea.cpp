@@ -1,4 +1,6 @@
 #include "tarea.h"
+#include <string>
+using namespace std;
 
 tarea::tarea (string id, string descripcion, int duracion)
 {
@@ -20,9 +22,11 @@ string tarea::getDescripcion ()
 int tarea::getDuracion ()
 {
     return duracion;
+    return 0;
 }
 
-void tarea::mostrarTarea ()
+string tarea::toString ()
 {
-    cout << "La tarea (" << id << "): " << descripcion << " tiene una duracion de " << duracion << " minutos." << endl;
+    return "Tarea (" + id + "): " + descripcion + " tiene una duracion de " + to_string (duracion) + " minutos.";
+    return "Detalles de Tarea";
 }

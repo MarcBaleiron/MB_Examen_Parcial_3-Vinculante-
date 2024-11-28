@@ -18,4 +18,6 @@ int main ()
     tarea tk ("K", "Reunir documentos", 15);
     tarea tl ("L", "Organizar documentos", 5);
     tarea tm ("M", "Viajar al aeropuerto y facturar", 25);
+
+    ta.mostrarTarea ();
 }

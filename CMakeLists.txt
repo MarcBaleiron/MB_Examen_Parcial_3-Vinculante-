@@ -5,4 +5,7 @@ set (CMAKE_CXX_STANDARD 17)
 
 add_executable (MB_Examen_Parcial_3_Vinculante
         Ejercicio/main.cpp
-        Ejercicio/tarea.cpp)
+        Ejercicio/tarea.cpp
+        Ejercicio/tarea.h
+        Ejercicio/actor.cpp
+        Ejercicio/actor.h)

@@ -1,16 +1,25 @@
-//
-// Created by marcb on 28/11/2024.
-//
-
 #ifndef ACTOR_H
 #define ACTOR_H
+#include <iostream>
+#include <string>
+#include <vector>
+#include "tarea.h"
+using namespace std;
 
+class actor
+{
+private:
+    string nombre;
+    vector <tarea> listaTareas;
+    int numTareas;
 
+public:
+    actor (string nombre);
 
-class actor {
-
+    string getNombre ();
+    int getNumTareas ();
+    int addTarea (tarea t);
+    string resultado ();
 };
 
-
-
-#endif //ACTOR_H
+#endif

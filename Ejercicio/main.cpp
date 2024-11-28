@@ -20,4 +20,6 @@ int main ()
     tarea tm ("M", "Viajar al aeropuerto y facturar", 25);
 
     ta.mostrarTarea ();
+
+    return 0;
 }

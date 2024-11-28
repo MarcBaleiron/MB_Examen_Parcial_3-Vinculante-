@@ -42,7 +42,7 @@ string actor::resultado ()
         duracionTotal += listaTareas [i].getDuracion ();
     }
 
-    result += "Duracion Total: " + to_string (duracionTotal) + "\n";
+    result += "Duracion Total: " + to_string (duracionTotal) + " min\n";
     cout << result;
     return result;
 }

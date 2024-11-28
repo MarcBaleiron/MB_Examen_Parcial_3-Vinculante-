@@ -1,10 +1,15 @@
+#include <iostream>
 #include <string>
 #include "tarea.h"
 #include "actor.h"
 using namespace std;
 
+// Función principal en la que se ejecuta el programa
+
 int main ()
 {
+// Creación de las tareas con sus valores
+
     tarea ta ("A", "Reserva de vuelo", 20);
     tarea tb ("B", "Informar a casa para empacar", 5);
     tarea tc ("C", "Empacar maletas", 40);
@@ -18,6 +23,8 @@ int main ()
     tarea tk ("K", "Reunir documentos", 15);
     tarea tl ("L", "Organizar documentos", 5);
     tarea tm ("M", "Viajar al aeropuerto y facturar", 25);
+
+// Creación de los actores y asignación de sus tareas
 
     actor a1 ("Asistente 1");
     a1.addTarea (ta);
@@ -39,6 +46,8 @@ int main ()
     a4.addTarea (tl);
     a4.addTarea (tj);
     a4.addTarea (tm);
+
+// Resultado del ejercicio
 
     a1.resultado ();
     a2.resultado ();

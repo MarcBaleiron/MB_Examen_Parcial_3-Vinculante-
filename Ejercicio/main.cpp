@@ -10,7 +10,7 @@ using namespace std;
 
 int main ()
 {
-// Creación de las tareas con sus valores
+// Creación de las tareas con sus valores por medio de un mapa
 
 map <char, tarea> tareas =
 {
@@ -29,12 +29,15 @@ map <char, tarea> tareas =
     {'M', tarea ("M", "Viajar al aeropuerto y facturar", 25)}
 };
 
+// Función para imprimir las tareas
+
     cout << "Tareas a completar en menos de 100 min: \n";
     for (auto& pair : tareas)
     {
         cout << pair.second.toString () << "\n";
     }
 
+// do-while para que el usuario añada los actores y las tareas asignadas a cada uno
 
     bool pregunta_actor = true;
     char respuesta_actor;
@@ -44,6 +47,8 @@ map <char, tarea> tareas =
     {
         cout << "\nDesea añadir un actor? (s/n): ";
         cin >> respuesta_actor;
+
+        // try-catch para asegurarse de que el input del usuario es válido
 
         try
         {
@@ -68,10 +73,14 @@ map <char, tarea> tareas =
                 actor i (nombre);
                 actores.push_back (i);
 
+                // do-while para que el usuario añada las tareas asignadas a cada actor
+
                 do
                 {
                     cout << "Desea introducir una tarea para el actor? (s/n): \n";
                     cin >> respuesta_tarea;
+
+                    // try-catch para asegurarse de que el input del usuario es válido
 
                     try
                     {
@@ -114,9 +123,28 @@ map <char, tarea> tareas =
         }
     } while (pregunta_actor);
 
+    // Función en la que se imprimen los actores creados, las tareas y el tiempo total para completarlas
+
+    int duracion_total = 0;
     for (const auto& actor : actores)
     {
-        cout << actor.resultado () << endl;
+        cout << actor.resultado () << "\n";
+
+        for (int i = 0; i < actor.getNumTareas (); i++)
+        {
+            duracion_total += actor.getTarea (i).getDuracion ();
+        }
+    }
+
+    // Condicionales para determinar si el ejecutivo llegará a tiempo o no
+
+    if (duracion_total <= 100)
+    {
+        cout << "Bien hecho! Todas las tareas han sido completadas en menos de 100 min.";
+    }
+    else if (duracion_total > 100)
+    {
+        cout << "Lo siento, de esa manera el ejecutivo no podra llegar a tiempo ya que para terminar todas las tareas hacen falta mas de 100 min.";
     }
 
     return 0;

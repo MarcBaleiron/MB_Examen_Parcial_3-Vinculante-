@@ -53,6 +53,5 @@ string actor::resultado () const
     }
 
     result += "Duracion Total: " + to_string (duracionTotal) + " min\n";
-    cout << result << "\nDuracion Total: " + to_string (duracionTotal) + " min\n";
     return result;
 }

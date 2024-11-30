@@ -4,7 +4,7 @@ using namespace std;
 
 // Clase tarea definida
 
-tarea::tarea() : id(""), descripcion(""), duracion(0) {}
+tarea::tarea () : id (""), descripcion (""), duracion (0) {}
 
 tarea::tarea (string id, string descripcion, int duracion)
 {

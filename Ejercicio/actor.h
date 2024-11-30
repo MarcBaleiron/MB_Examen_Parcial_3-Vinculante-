@@ -25,6 +25,13 @@ public:
     int getNumTareas () const;
     int addTarea (tarea t);
     string resultado () const;
+
+    // Función para obtener una tarea del actor
+
+    tarea getTarea (int index) const
+    {
+        return listaTareas [index];
+    }
 };
 
 #endif

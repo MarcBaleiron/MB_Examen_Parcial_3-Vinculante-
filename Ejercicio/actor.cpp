@@ -15,14 +15,14 @@ actor::actor (string nombre)
 
 // Función para obtener el nombre del actor
 
-string actor::getNombre ()
+string actor::getNombre () const
 {
     return nombre;
 }
 
 // Función para obtener el número de tareas del actor
 
-int actor::getNumTareas ()
+int actor::getNumTareas () const
 {
     return numTareas;
 }
@@ -41,7 +41,7 @@ int actor::addTarea (tarea t)
 
 // Función para obtener las tareas hechas por el actor y la duración de las tareas de este
 
-string actor::resultado ()
+string actor::resultado () const
 {
     string result = getNombre () + ":\n";
     int duracionTotal = 0;

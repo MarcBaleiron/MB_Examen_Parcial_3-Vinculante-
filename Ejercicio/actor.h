@@ -21,10 +21,10 @@ private:
 public:
     actor (string nombre);
 
-    string getNombre ();
-    int getNumTareas ();
+    string getNombre () const;
+    int getNumTareas () const;
     int addTarea (tarea t);
-    string resultado ();
+    string resultado () const;
 };
 
 #endif

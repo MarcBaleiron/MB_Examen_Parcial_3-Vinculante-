@@ -17,12 +17,13 @@ private:
 // Funciones de la clase tarea creadas
 
 public:
+    tarea ();
     tarea (string id, string descripcion, int duracion);
 
-    string getId ();
-    string getDescripcion ();
-    int getDuracion ();
-    string toString ();
+    string getId () const;
+    string getDescripcion () const;
+    int getDuracion () const;
+    string toString () const;
 };
 
 #endif
